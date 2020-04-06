@@ -1,0 +1,117 @@
+artem@artem-X550MJ:~/Рабочий стол$ cat 1.txt
+aaaaa
+artem@artem-X550MJ:~/Рабочий стол$ cat 2.txt
+aaaaa
+artem@artem-X550MJ:~/Рабочий стол$ cat 3.txt
+aabba
+artem@artem-X550MJ:~/Рабочий стол$ cmp 1.txt 2.txt
+artem@artem-X550MJ:~/Рабочий стол$ cmp 1.txt 3.txt
+1.txt 3.txt различаются: байт 3, строка 1
+artem@artem-X550MJ:~/Рабочий стол$ diff 1.txt 2.txt
+artem@artem-X550MJ:~/Рабочий стол$ diff 1.txt 3.txt
+1c1
+< aaaaa
+---
+> aabba
+artem@artem-X550MJ:~/Рабочий стол$ diff -s 1.txt 2.txt
+Файлы 1.txt и 2.txt идентичны
+artem@artem-X550MJ:~/Рабочий стол$ cat 4.txt
+a
+b
+c
+e
+artem@artem-X550MJ:~/Рабочий стол$ cat 5.txt
+a
+b
+c
+d
+artem@artem-X550MJ:~/Рабочий стол$ comm 4.txt 5.txt
+		a
+		b
+		c
+	d
+comm: данные файла 2 не отсортированы
+	
+e
+artem@artem-X550MJ:~/Рабочий стол$ wc 4.txt
+4 4 8 4.txt
+artem@artem-X550MJ:~/Рабочий стол$ sudo dd if=4.txt of=5.txt
+[sudo] пароль для artem: 
+0+1 записей получено
+0+1 записей отправлено
+8 bytes copied, 0,000561539 s, 14,2 kB/s
+artem@artem-X550MJ:~/Рабочий стол$ cat 5.txt
+a
+b
+c
+e
+artem@artem-X550MJ:~/Рабочий стол$ cat 6.txt
+a b
+c d
+artem@artem-X550MJ:~/Рабочий стол$ cat 7.txt
+a e
+e e
+artem@artem-X550MJ:~/Рабочий стол$ join 6.txt 7.txt
+a b e
+artem@artem-X550MJ:~/Рабочий стол$ cat 8.txt
+d
+c
+b
+a
+artem@artem-X550MJ:~/Рабочий стол$ sort 8.txt
+a
+b
+c
+d
+artem@artem-X550MJ:~/Рабочий стол$ tail -n 2 8.txt
+b
+a
+artem@artem-X550MJ:~$ tr a b
+aaaaaaa
+bbbbbbb
+artem@artem-X550MJ:~$ tr -d [:lower:]
+HHHHfffOOOooo
+HHHHOOO
+artem@artem-X550MJ:~/Рабочий стол$ cat 9.txt
+небо
+облака
+облака
+облака
+солнце
+звезды
+artem@artem-X550MJ:~/Рабочий стол$ uniq -d 9.txt
+облака
+artem@artem-X550MJ:~/Рабочий стол$ uniq -D 9.txt
+облака
+облака
+облака
+artem@artem-X550MJ:~/Рабочий стол$ sum -r 9.txt
+45434     1
+artem@artem-X550MJ:~/Рабочий стол$ echo abcd | cut -c 1,2,3
+abc
+artem@artem-X550MJ:~/Рабочий стол$ sed '1,3d' 9.txt
+облака
+солнце
+звезды
+artem@artem-X550MJ:~/Рабочий стол$ head -n 3 9.txt
+небо
+облака
+облака
+artem@artem-X550MJ:~/Рабочий стол$ file -i 9.txt
+9.txt: text/plain; charset=utf-8
+artem@artem-X550MJ:~/Рабочий стол$ du -k /home/artem/'Рабочий стол'/labs_2sem
+12	/home/artem/Рабочий стол/labs_2sem
+artem@artem-X550MJ:~/Рабочий стол$ find -name 'labs*'
+./labs_1sem
+./labs_2sem
+artem@artem-X550MJ:~/Рабочий стол$ du -k /home/artem/'Рабочий стол'/labs_2sem
+12	/home/artem/Рабочий стол/labs_2sem
+artem@artem-X550MJ:~/Рабочий стол$ touch aaa.txt|touch aaa1.txt|touch bbb.txt|find -name 'aaa*'
+./aaa.txt
+./aaa1.txt
+artem@artem-X550MJ:~/Рабочий стол$ echo AbCdEf | tr -d [:lower:] | cut -c 2,3
+CE
+artem@artem-X550MJ:~/Рабочий стол$ cat > text.txt | echo "Hello" | cut -c 3,2,1 | xargs -n4 -p mv
+mv Hel ?...
+
+
