@@ -1,0 +1,60 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[russian]{babel}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+\begin{document}
+
+\[\textit{Г\thispace\thinspaceл\thispace\thinspaceа\thispace\thinspaceв\thispace\thinspaceа\thispace\thinspace9}\]
+\[\textbf{ТЕОРЕМА РОЛЛЯ}\]
+\[\textbf{И ТЕОРЕМА О СРЕДНЕМ ЗНАЧЕНИИ}\]\
+\par \textnormal{Вернёмся снова к дифференциальному исчислению.}
+\par \textbf{Теорема 156 } \textnormal{(так называемая теорема Ролля).} \textit{Пусть f(a) непрерывна в} [\textit{a, b}],\
+\[\textit{f(a) = f(b) = 0}\]
+\textit{и f(x) существует для a<x<b. Тогда существует $\xi$ такое, что}
+\[\textit{a<$\xi$<b, f'($\xi$) = 0.}\]
+\par \textbf{Предварительное замечание.} \textnormal{ Если число }
+\textit{$\xi$} \textnormal{ удовлетворяет неравенствам } \textit{a<$\xi$<b} \textnormal{, то мы будем иногда говорить, что оно лежит между a и b или также между b и a.}\
+\par \text{Д\thispace\thinspaceо\thispace\thinspaceк\thispace\thinspaceа\thispace\thinspaceз\thispace\thinspaceа\thispace\thinspaceт\thispace\thinspaceе\thispace\thinspaceл\thispace\thinspaceь\thispace\thinspaceс\thispace\thinspaceт\thispace\thinspaceв\thispace\thinspaceо.}
+\textnormal {1) Если}
+\[\textit{f(x) = 0 при a$\le$x$\le$b,}\]
+\textnormal {то}
+\[f'(\frac{a + b}{2})=0.\]
+\par \textnormal{2) Пусть} \textit{f(x)} \textnormal{принимает где-нибудь в [\textit{a, b}] положительное значение. Тогда в силу теоремы 146, существует \textit{$\xi$} такое, что}
+\[\textit{a<$\xi$<b, f(x)$\le$f($\xi$)} \textnormal{ при } \textit{a$\le$x$\le$b.}\]
+\textnormal{При \textit{f'($\xi$)>0} функция \textit{f(x)} возрастала бы в \textit{$\xi$}, а при \textit{f'($\xi$)<0} убывала бы. Таким образом, в обоих случаях в [\textit{a, b}] существовало бы \textit{x} такое, что}
+\[\textit{f(x)>f($\xi$).}\]
+
+\newpage
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfood{}
+\fancyhead[R]{129}
+\fancyhead[C]{\textit{Теорема Ролля и теорема о среднем значении}}
+\textnormal{Поэтому}
+\[\textit{f'($\xi$) = 0.}\]
+\par \textnormal{3) Пусть}
+\[\textit{f(x)$\le$0 \textnormal{при} a$\le$x$\le$b,}\]
+\textnormal{причём где-нибудь в \textit{[a, b] f(x)<0.} Тогда для - \textit{f(x)} имеет место случай 2), и, следовательно, существует \textit{$\xi$} такое, что}
+\[\textit{a<$\xi$<b, - f'($\xi$) = 0.}\]
+\par \textbf{Теорема 157. } \textit{Если }
+\[\textit{f(x) = \sum\limits_{y=0}^n $a_{y}$ $x^{y}$,}\]
+\[\textit{$a_{n}$ $\neq$ 0,}\]
+\textit{то уравнение}
+\[\textit{f(x) = 0}\]
+\textit{имеет, самое большое, n решений.}
+\par \text{Д\thispace\thinspaceо\thispace\thinspaceк\thispace\thinspaceа\thispace\thinspaceз\thispace\thinspaceа\thispace\thinspaceт\thispace\thinspaceе\thispace\thinspaceл\thispace\thinspaceь\thispace\thinspaceс\thispace\thinspaceт\thispace\thinspaceв\thispace\thinspaceа.}
+\textnormal{ При \textit{n = 0} утверждение очевидно, так как при \textit{$a_{n}$ $\neq$ 0} уравнение}
+\[\textit{$a_{0}$ = 0}\]
+\textnormal{вовсе не имеет решений.}
+\par \textnormal{Пусть \textit{n>0} и для \textit{n-1} утверждение теоремы верно.}
+\par \textnormal{1) Если уравнение}
+\[\textit{f(x) = 0}\]
+\textnormal{Не имеет решений, то доказывать нечего.}
+\[\textit{f(x) = f(x) - f($\xi$) = \sum\limits_{y=0}^n $a_{y}$ $x^{y}$ - \sum\limits_{y=0}^n $a_{y}$ $\xi$^{y}$ = \sum\limits_{y=1}^n $a_{y}$ ($x^{y}$ - $\xi$^{y}$) = (x-$\xi$) \sum\limits_{y=1}^n $a_{y}$ \sum\limits_{\mu=0}^{y-1} $x^{\mu}$ \xi^{y-1-\mu} }\]
+
+\end{document}
